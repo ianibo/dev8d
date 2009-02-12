@@ -1,0 +1,8 @@
+This is the readme for LazyLecturer
+
+Structure
+
+/cook
+	The django app for processing bookmarklet requests and auto tagging them in delicious
+/bookmarklet
+	The bookmarklet code
