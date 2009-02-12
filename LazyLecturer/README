@@ -4,5 +4,7 @@ Structure
 
 /cook
 	The django app for processing bookmarklet requests and auto tagging them in delicious
+	Dependencies - needs pydelicious 0.5.2rc2 from http://code.google.com/p/pydelicious/ readme has install instructions.
+
 /bookmarklet
 	The bookmarklet code
