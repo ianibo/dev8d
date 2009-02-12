@@ -30,7 +30,7 @@ def cook_select_resource (request, key):
       print "No URL given"
     else:
       # a = pydelicious.apiNew('ibbomashup', '**************')
-      a = DeliciousAPI('ibbomashup', '1bb0m4shup')
+      a = DeliciousAPI('ibbomashup', '**************')
 
       a.tags_get()
       print "Select the resource "+res_url+" notes text is "+res_txt
