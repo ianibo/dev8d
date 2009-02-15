@@ -1,6 +1,7 @@
 This is the readme for LazyLecturer
 
 Structure
+---------
 
 /cook
 	The django app for processing bookmarklet requests and auto tagging them in delicious
@@ -8,3 +9,55 @@ Structure
 
 /bookmarklet
 	The bookmarklet code
+
+
+Installation
+------------
+
+To build / Install the web service you will need to check out the build tree from github. Use the following command
+
+git clone git@github.com:ianibo/dev8d.git 
+
+This will check the project and it's components out 
+
+*Important*
+You will need to eddit ~/LazyLecturer/cook/select.py and change the delicious credentials. Be careful not to check in username/password to GitHub or the world will see your password
+
+You will need to install the Google AppEngine SDK to deploy the app.
+
+In order to run the web service on your local server 
+
+cd $GoogleAppEngineHome
+./dev_appserver.py /path/to/checked.out/app
+
+for me this works as
+
+ibbo@plank:~/dev8d/LazyLecturer$ cd /opt/google_appengine/
+ibbo@plank:/opt/google_appengine$ ./dev_appserver.py /home/ibbo/dev8d/LazyLecturer/cook
+
+
+To hard deploy to google app engine use
+
+./appcfg.py  update /home/ibbo/dev8d/LazyLecturer/cook
+
+(Need user perms to deploy, mail ianibbo@googlemail.com with details of your google app engine username so I can add you to the list of people able to deploy.
+
+Usage
+-----
+
+http://lazylecturer.appspot.com/
+
+The web service should talk to 
+
+http://lazylecturer.appspot.com/ 
+or http://localhost:8080
+
+and the path to select a resource and add it to delicious is
+
+/select/?resource_url=http://ianibbo.blogspot.com&resource_text=fred
+
+where resource_url is the URL of the target (Pref URL encoded ;))
+and resource_text is the optional comment text
+
+After this call, the resource will be available in delicious, or an error will occour.
+
