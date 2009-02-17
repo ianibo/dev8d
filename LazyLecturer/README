@@ -10,6 +10,17 @@ Structure
 /bookmarklet
 	The bookmarklet code
 
+Prereqs
+-------
+
+You'll need easy_install - under linux this is
+
+sudo apt-get install python-setuptools
+
+Download the latest pydelicious, unzip and run
+python setup.py install
+
+
 
 Installation
 ------------
